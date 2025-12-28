@@ -1,4 +1,4 @@
-import Campground from "../Models/campground.js";
+import Campground from "../Models/Campground.js";
 import Review from "../Models/review.js";
 
 export const createReview = async (req, res) => {
