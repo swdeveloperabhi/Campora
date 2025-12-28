@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import User from "../models/user.js";
+import User from "../Models/user.js";
 import { sendVerificationEmail, sendWelcomeEmail } from "../utils/email.js";
 import passport from "passport";
 
