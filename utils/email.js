@@ -22,9 +22,6 @@ export const sendVerificationEmail = async (to, link) => {
       <a href="${link}">Verify Account</a>
     `,
   });
-  console.log("EMAIL_USER:", process.env.EMAIL_USER ? "OK" : "MISSING");
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "OK" : "MISSING");
-
 };
 
 export const sendWelcomeEmail = async (to, username) => {
