@@ -9,6 +9,8 @@ It is inspired by real-world platforms like YelpCamp, but redesigned with Indian
 
 This project was built to deeply understand how real web applications work end-to-end, not just to showcase UI.
 
+
+
 📌 Why Campora?
 
 Finding reliable camping locations in India is difficult due to scattered information and lack of authenticity.
@@ -17,78 +19,119 @@ Campora solves this by providing a platform where real users share real location
 This project focuses on:
 
 Backend correctness
+
 Security
+
 Authentication
+
 Scalable project structure
+
 Real-world deployment
 
 ✨ Features
 🔐 Authentication & Authorization
 
 User registration, login, and logout
+
 Password hashing with salt
+
 Session-based authentication
+
 Protected routes
+
 Flash messages for feedback
 
 🏕️ Campgrounds
 
 Create, edit, and delete campgrounds
+
 Upload multiple images
+
 Images stored securely using Cloudinary
+
 Location stored using GeoJSON
+
 Owner-only edit/delete access
 
 ⭐ Reviews & Ratings
 
 Add reviews with star ratings
+
 Review ownership enforced
+
 Server-side validation using Joi
 
 🗺️ Maps & Geolocation
 
 Interactive maps using MapTiler
+
 Marker clustering
+
 Exact campground coordinates
+
 India-focused map experience
 
 🛡️ Security
 
 Input sanitization (NoSQL injection prevention)
+
 Secure HTTP headers using Helmet
+
 Content Security Policy (CSP)
+
 Environment variables for secrets
+
 MongoDB-backed session storage
 
 🧠 Error Handling
 
 Centralized error handling
+
 Custom Express error class
+
 Graceful 404 and error pages
 
 🧱 Tech Stack
 Frontend
+
 EJS (Server-Side Rendering)
+
 Bootstrap 5
+
 Custom CSS
+
 Responsive design
+
 Backend
+
 Node.js
+
 Express.js
+
 MongoDB
+
 Mongoose
 
 Authentication & Security
 
 Passport.js
+
 express-session
+
 connect-mongo
+
 Helmet
+
 Joi
+
 Cloud & Services
+
 Cloudinary (Image storage)
+
 MapTiler (Maps & geolocation)
+
 MongoDB Atlas (Database)
+
 Render (Deployment)
 
 🗂️ Project Structure
@@ -116,7 +159,8 @@ CLOUDINARY_KEY=your_cloud_key
 CLOUDINARY_SECRET=your_cloud_secret
 MAPTILER_API_KEY=your_maptiler_key
 
-Never commit .env to GitHub
+
+⚠️ Never commit .env to GitHub
 
 🛠️ Local Setup
 # Clone the repository
@@ -133,9 +177,10 @@ npm run dev
 
 
 App runs at:
+
 http://localhost:3000
 
-What This Project Taught Me
+🧠 What This Project Taught Me
 
 How authentication actually works (sessions, cookies, Passport)
 
@@ -151,7 +196,7 @@ Deploying a full-stack application
 
 This project was challenging, frustrating, and extremely rewarding.
 
-Known Limitations
+⚠️ Known Limitations
 
 No search or filtering yet
 
@@ -183,13 +228,17 @@ Built by Abhishek Kumar
 Second-year Computer Science student focused on:
 
 Backend engineering
+
 System design
+
 Security
+
 Building real-world products
 
 This project was built for learning, not shortcuts.
 
-Finallyy!!!
+⭐ Final Thoughts
+
 If you’re a developer, recruiter, or learner — feel free to explore the app, review the code, or suggest improvements.
 
 Campora is just the beginning 🚀
