@@ -1,5 +1,5 @@
 /* ===============================
-   NAVBAR BASE
+           NAVBAR BASE
 ================================ */
 .campora-navbar {
   background: rgba(12, 12, 12, 0.88);
@@ -18,7 +18,7 @@
 }
 
 /* ===============================
-   INSANE NAV LINKS
+         NAV LINKS
 ================================ */
 .insane-link {
   color: #ffffff !important;
@@ -29,7 +29,7 @@
   transition: all 0.35s ease;
 }
 
-/* Neon underline (hidden) */
+
 .insane-link::after {
   content: "";
   position: absolute;
@@ -51,7 +51,6 @@
   transition: width 0.35s ease;
 }
 
-/* Hover = GLOW + LIFT */
 .insane-link:hover {
   color: #ffffff !important;
   transform: translateY(-2px);
@@ -61,7 +60,7 @@
     0 0 30px rgba(255, 255, 255, 0.7);
 }
 
-/* Underline expand */
+
 .insane-link:hover::after {
   width: 100%;
 }

@@ -107,7 +107,7 @@ section {
     transform: scale(0.98);
 }
 
-/* Glow sweep effect */
+
 .btn-glow {
     position: absolute;
     top: 0;
@@ -133,7 +133,7 @@ section {
     }
 }
 
-/* Outline button animation */
+
 .btn-animated-outline {
     transition: all 0.3s ease;
     position: relative;

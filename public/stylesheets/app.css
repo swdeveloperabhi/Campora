@@ -161,36 +161,38 @@ html, body {
   margin-bottom: 2rem;
 }
 
-/* ===============================
-   REGISTER PAGE BACKGROUND
-================================ */
-.register-page {
-  min-height: 100vh;
-  background:
-    linear-gradient(
-      rgba(10, 10, 10, 0.75),
-      rgba(10, 10, 10, 0.75)
-    ),
-    url("https://images.pexels.com/photos/8337433/pexels-photo-8337433.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px 40px;
-}
 
 /* ===============================
-   CARD (GLASSMORPHISM)
+             CARD 
 ================================ */
 .register-card {
   width: 100%;
   max-width: 420px;
-  background: rgba(18, 18, 18, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 18px;
+
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+  border-radius: 20px;
   padding: 32px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+
+ 
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.6);
+    0 8px 32px rgba(0, 0, 0, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  overflow: hidden;
 }
 
 /* ===============================
@@ -284,35 +286,36 @@ color: #228B22;
 }
 
 /* ===============================
-   LOGIN PAGE BACKGROUND
-================================ */
-.login-page {
-  min-height: 100vh;
-  background:
-    linear-gradient(
-      rgba(10, 10, 10, 0.75),
-      rgba(10, 10, 10, 0.75)
-    ),
-    url("https://images.pexels.com/photos/8337433/pexels-photo-8337433.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px 40px;
-}
-
-/* ===============================
    CARD
 ================================ */
 .login-card {
   width: 100%;
   max-width: 420px;
-  background: rgba(18, 18, 18, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 18px;
+
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+  border-radius: 20px;
   padding: 32px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* Glass edges */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* Floating glass glow */
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.6);
+    0 8px 32px rgba(0, 0, 0, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  overflow: hidden;
 }
 
 /* ===============================
@@ -392,36 +395,34 @@ color: #228B22;
   text-decoration: underline;
 }
 
-/* ===============================
-   NEW CAMPGROUND PAGE BACKGROUND
-================================ */
-.new-camp-page {
-  min-height: 100vh;
-  background:
-    linear-gradient(
-      rgba(12, 12, 12, 0.75),
-      rgba(12, 12, 12, 0.75)
-    ),
-    url("https://images.pexels.com/photos/8337433/pexels-photo-8337433.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px 40px;
-}
 
 /* ===============================
-   CARD (GLASSMORPHISM)
+   NEW CAMPGROUND 
 ================================ */
 .new-camp-card {
   width: 100%;
   max-width: 600px;
-  background: rgba(18, 18, 18, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 18px;
   padding: 36px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.06)
+  );
+
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.6);
+    0 28px 70px rgba(0, 0, 0, 0.65),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.1);
 }
 
 /* ===============================
