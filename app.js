@@ -24,6 +24,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.set('query parser', 'extended');
+app.set('trust proxy', 1);
 
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
@@ -37,9 +38,12 @@ const dbUrl = process.env.DB_URL;
 const port = process.env.PORT || 3000;
 
 
-mongoose.connect(dbUrl)
-  .then(() => console.log("Database Connected"))
-  .catch(err => console.error("DB connection failed:", err));
+mongoose.connect(dbUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log("Database Connected"))
+.catch(err => console.error("DB connection failed:", err));
 
 
 const store = MongoStore.create({
