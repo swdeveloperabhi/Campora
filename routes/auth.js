@@ -1,5 +1,6 @@
 import express from "express";
-import { createUser, loginUser, logoutUser, verifyUser , renderRegisterForm, renderLoginForm } from "../controllers/user.js";
+import { createUser, loginUser, logoutUser, renderRegisterForm, renderLoginForm } from "../controllers/user.js";
+import { storeReturnTo, isLoggedIn } from "../middleware.js";
 
 const router = express.Router();
 
@@ -10,13 +11,11 @@ router.post("/register", createUser);
 
 // ===== LOGIN =====
 router.get("/login",renderLoginForm)
-router.post("/login", loginUser);
+router.post("/login", storeReturnTo,loginUser);
 
 // ===== LOGOUT =====
 router.get("/logout", logoutUser);
 
-// ===== EMAIL VERIFICATION =====
-router.get("/verify/:token", verifyUser);
 
 
 export default router;
