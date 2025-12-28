@@ -196,7 +196,7 @@ Deploying a full-stack application
 
 This project was challenging, frustrating, and extremely rewarding.
 
-⚠️ Known Limitations
+⚠️Known Limitations
 
 No search or filtering yet
 
@@ -237,7 +237,7 @@ Building real-world products
 
 This project was built for learning, not shortcuts.
 
-⭐ Final Thoughts
+finally!!!
 
 If you’re a developer, recruiter, or learner — feel free to explore the app, review the code, or suggest improvements.
 
