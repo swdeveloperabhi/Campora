@@ -20,10 +20,15 @@ export const createUser = async (req, res) => {
     await User.register(user, password); // Passport-local
 
     const verifyLink = `${process.env.BASE_URL}/verify/${token}`;
-    await sendVerificationEmail(user.email, verifyLink);
+
+    
+    sendVerificationEmail(user.email, verifyLink)
+      .then(() => console.log("Verification email sent"))
+      .catch(err => console.error("Email failed:", err));
 
     req.flash("success", "Account created! Please verify your email to continue.");
-    res.redirect("/login");
+    res.redirect("/login"); // Respond immediately
+
   } catch (e) {
     req.flash("error", e.message);
     res.redirect("/register");
