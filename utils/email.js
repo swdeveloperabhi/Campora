@@ -1,37 +1,28 @@
 import dotenv from "dotenv";
 dotenv.config({ path: ".env" }); 
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, 
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendVerificationEmail = async (to, link) => {
-  await transporter.sendMail({
-    from: `"Campora" <${process.env.EMAIL_USER}>`,
+  await resend.emails.send({
+    from: "Campora <onboarding@resend.dev>",
     to,
     subject: "Verify your Campora account",
     html: `
       <h2>Thanks for registering with Campora 🌄 — Verify your email</h2>
       <p>Please verify your email:</p>
-      <a href="${link}">Verify Account</a>
+      <a href="${link}">${link}</a>
     `,
   });
 };
 
 export const sendWelcomeEmail = async (to, username) => {
-  await transporter.sendMail({
-    from: `"Campora" <${process.env.EMAIL_USER}>`,
+  await resend.emails.send({
+    from: "Campora <onboarding@resend.dev>",
     to,
-    subject: "Welcome to Campora 🎉",
-    html: `
-      <h2>Hello ${username}!</h2>
-      <p>Your account is now verified. Enjoy exploring Campora!</p>
-    `,
+    subject: "Welcome to Campora!",
+    html: `<h3>Hello ${username}, welcome aboard 🎉</h3>`,
   });
 };

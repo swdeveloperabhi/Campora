@@ -26,11 +26,6 @@ export const createUser = async (req, res) => {
       .then(() => console.log("Verification email sent"))
       .catch(err => console.error("Email failed:", err));
 
-      console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS exists:", !!process.env.EMAIL_PASS);
-console.log("BASE_URL:", process.env.BASE_URL);
-
-
     req.flash("success", "Account created! Please verify your email to continue.");
     res.redirect("/login"); // Respond immediately
 

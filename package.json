@@ -8,7 +8,14 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "keywords": ["camping", "full-stack", "nodejs", "express", "mongodb", "passport"],
+  "keywords": [
+    "camping",
+    "full-stack",
+    "nodejs",
+    "express",
+    "mongodb",
+    "passport"
+  ],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
@@ -33,6 +40,7 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0",
+    "resend": "^6.6.0",
     "sanitize-html": "^2.17.0"
   },
   "devDependencies": {
