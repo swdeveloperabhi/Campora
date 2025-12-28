@@ -1,0 +1,99 @@
+<% layout("layouts/boilerplate") %>
+
+<section class="new-camp-page d-flex align-items-center justify-content-center mb-4">
+  <div class="new-camp-card">
+
+    <!-- Header -->
+    <div class="new-camp-header text-center mb-4">
+      <h2 class="new-camp-title">Add a New Campground</h2>
+      <p class="new-camp-subtitle">
+        Share your adventure with the Campora community
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form action="/campgrounds" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          id="title"
+          name="campgrounds[title]"
+          placeholder="Name of the campground"
+          required
+        >
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Enter a valid Title</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          id="location"
+          name="campgrounds[location]"
+          placeholder="City, State or Country"
+          required
+        >
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Enter a valid Location</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control form-control-lg"
+          id="description"
+          name="campgrounds[description]"
+          placeholder="Describe your campground"
+          rows="4"
+          required
+        ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Enter a valid Description</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="price">Campground Price</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text">&#8377;</span>
+          <input
+            type="number"
+            class="form-control form-control-lg"
+            id="price"
+            name="campgrounds[price]"
+            placeholder="0"
+            required
+          >
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Enter a valid Price</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="images" class="form-label">Upload image(s)</label>
+        <input
+          class="form-control form-control-lg"
+          type="file"
+          name="images"
+          id="images"
+          multiple
+        >
+      </div>
+
+      <div class="mb-4">
+        <button class="btn new-camp-btn w-100" type="submit">Add Campground</button>
+      </div>
+
+      <div class="text-center">
+        <a class="text-decoration-none new-camp-back" href="/campgrounds">ALL CAMPGROUNDS</a>
+      </div>
+
+    </form>
+
+    <% include("../partials/footer") %>
+  </div>
+</section>

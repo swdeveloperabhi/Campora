@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campora | Discover & Share Campgrounds</title>
+
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/home.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-blur">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/campgrounds/home">🏕️ Campora</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/campgrounds">Explore</a>
+                </li>
+
+                <% if(!currentUser) { %>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register" class="btn btn-success ms-lg-2">
+                            Get Started
+                        </a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <span class="nav-link text-info">
+                            Hi, <%= currentUser.username %>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link text-danger">Logout</a>
+                    </li>
+                <% } %>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container text-center">
+        <h1 class="hero-title">
+            Discover Beautiful <span>Campgrounds</span><br>Across India
+        </h1>
+        <p class="hero-subtitle">
+            Campora helps you explore, review, and share camping spots with fellow adventurers.
+        </p>
+       <div class="d-flex justify-content-center gap-3 mt-4">
+    <a href="/campgrounds" class="btn btn-success btn-lg btn-animated">
+        Explore Campgrounds
+        <span class="btn-glow"></span>
+    </a>
+
+    <a href="/campgrounds/new" class="btn btn-outline-light btn-lg btn-animated-outline">
+        Add Yours
+    </a>
+</div>
+ </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <h2 class="section-title">Why Campora?</h2>
+            <p class="section-subtitle">Everything you need for the perfect outdoor experience</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>📍 Interactive Maps</h3>
+                    <p>Find campgrounds visually with clustering and real-time exploration.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>⭐ Trusted Reviews</h3>
+                    <p>Real reviews from real campers to help you choose confidently.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>📸 Share Experiences</h3>
+                    <p>Upload photos, write reviews, and help the community grow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA MAP SECTION -->
+<section class="cta-map">
+    <div class="container text-center">
+        <h2>Explore India’s Best Camping Spots</h2>
+        <p>From mountains to beaches — your adventure starts here.</p>
+        <a href="/campgrounds" class="btn btn-light btn-lg mt-3">View Map</a>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+ <% if(!currentUser){%>
+<section class="final-cta">
+    <div class="container text-center">
+        <h2>Ready for Your Next Adventure?</h2>
+        <p>Join Campora today and start exploring.</p>
+        <a href="/register" class="btn btn-success btn-lg mt-3">Create Account</a>
+    </div>
+</section>
+<% } %>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container text-center">
+        <p>© <%= new Date().getFullYear() %> Campora. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

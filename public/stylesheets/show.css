@@ -1,0 +1,173 @@
+/* ===============================
+   CAROUSEL
+================================ */
+.carousel-img {
+  height: 350px;
+  object-fit: cover;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.camp-details-card, .review-card {
+  background: rgba(18,18,18,0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+/* ===============================
+   CARD TEXT
+================================ */
+.camp-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.camp-desc {
+  color: #ccc;
+}
+
+.review-card .card-subtitle {
+  color: #aaa;
+}
+
+/* ===============================
+   BUTTONS (Glowing)
+================================ */
+.glow-btn {
+  background: linear-gradient(135deg, #ffffff, #dcdcdc);
+  color: #000;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,255,255,0.35);
+}
+
+/* ===============================
+   REVIEW SECTION
+================================ */
+.review-section h3, .reviews-list h3 {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.review-section textarea.form-control {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+}
+
+.review-section textarea:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 0 0.15rem rgba(255,255,255,0.15);
+}
+
+/* ===============================
+   MAP
+================================ */
+#map {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* ===============================
+   GLASS FORM
+================================ */
+.glass-form {
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+/* ===============================
+   INPUTS & TEXTAREA
+================================ */
+.glass-form input.form-control,
+.glass-form textarea.form-control,
+.glass-form .input-group-text {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+}
+
+.glass-form input:focus,
+.glass-form textarea:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 0 0.15rem rgba(255,255,255,0.2);
+}
+
+/* ===============================
+   BUTTONS (GLOW)
+================================ */
+.glow-btn {
+  background: linear-gradient(135deg, #ffffff, #dcdcdc);
+  color: #000;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,255,255,0.35);
+}
+
+/* ===============================
+   DELETE CHECKBOX OVER IMAGE
+================================ */
+.delete-checkbox input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+.delete-checkbox label {
+  font-size: 0.75rem;
+}
+
+/* ===============================
+   BACK LINK
+================================ */
+.link-back {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.link-back:hover {
+  color: #dcdcdc;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* ===============================
+   IMAGE THUMBNAILS
+================================ */
+.img-thumbnail {
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.2);
+}

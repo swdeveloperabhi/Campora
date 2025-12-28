@@ -1,0 +1,64 @@
+<% layout("layouts/boilerplate") %>
+
+<!-- MAP SECTION -->
+<section class="map-section mb-5">
+  <div id="map"></div>
+</section>
+
+<!-- HEADING -->
+<section class="mb-4 text-center">
+  <h1 class="section-title">Start Exploring</h1>
+  <p class="section-subtitle">
+    Discover campgrounds shared by adventurers across India
+  </p>
+</section>
+
+<!-- CAMPGROUND LIST -->
+<section class="campgrounds-grid container">
+  <% for(let c of campgrounds){ %>
+    <div class="camp-card mb-5">
+      <div class="row g-0 align-items-center">
+
+        <!-- Image -->
+        <div class="col-md-6 camp-card-img">
+          <img crossorigin="anonymous" src="<%= c.images[0]?.url || '/images/placeholder.jpg' %>" alt="<%= c.title %>">
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-6">
+          <div class="camp-card-body">
+            <h5 class="camp-title"><%= c.title %></h5>
+            <p class="camp-desc">
+              <%= c.description.substring(0, 150) %>...
+            </p>
+            <p class="camp-location">
+              📍 <%= c.location %>
+            </p>
+            <a href="/campgrounds/<%= c._id %>" class="btn btn-success btn-animated">
+              View Details
+              <span class="btn-glow"></span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <% } %>
+</section>
+
+<!-- MAP DATA -->
+<%- "<script>" %>
+const maptilerApiKey = "<%- process.env.MAPTILER_API_KEY %>";
+const campgrounds = {
+  type: "FeatureCollection",
+  features: <%- JSON.stringify(
+    campgrounds.map(campground => ({
+      type: "Feature",
+      geometry: campground.geometry,
+      properties: { popUpMarkup: campground?.properties?.popUpMarkup }
+    }))
+  ) %>
+};
+<%- "</script>" %>
+
+<script src="/javascripts/clusterMap.js"></script>

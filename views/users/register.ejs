@@ -1,0 +1,71 @@
+<% layout("layouts/boilerplate") %>
+
+<body class="register-page-body">
+<section class="register-page d-flex align-items-center justify-content-center mb-4" >
+  <div class="register-card">
+
+    <!-- Header -->
+    <div class="register-header text-center mb-4">
+      <h2 class="register-title">Join <span class="register-title-campora">Campora</span></h2>
+      <p class="register-subtitle">
+        Discover • Share • Explore the wild
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form action="/register" method="POST" class="validation-form" novalidate>
+
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input
+          type="text"
+          name="username"
+          class="form-control form-control-lg"
+          placeholder="Choose a username"
+          required
+        >
+        <div class="invalid-feedback">
+          Username is required
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control form-control-lg"
+          placeholder="you@example.com"
+          required
+        >
+        <div class="invalid-feedback">
+          Enter a valid email address
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control form-control-lg"
+          placeholder="Create a strong password"
+          required
+        >
+      </div>
+
+      <!-- CTA -->
+      <button class="btn register-btn w-100 mb-3">
+        Create Account
+      </button>
+
+      <!-- Footer -->
+      <p class="text-center register-footer">
+        Already have an account?
+        <a href="/login">Login</a>
+      </p>
+
+    </form>
+  </div>
+</section>
+</body>

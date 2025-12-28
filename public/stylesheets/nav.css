@@ -1,0 +1,87 @@
+/* ===============================
+   NAVBAR BASE
+================================ */
+.campora-navbar {
+  background: rgba(12, 12, 12, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 193, 7, 0.25);
+  z-index: 1050;
+}
+
+.campora-brand {
+  color: #228B22 !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: none; /* glow removed */
+}
+
+/* ===============================
+   INSANE NAV LINKS
+================================ */
+.insane-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  position: relative;
+  padding: 6px 2px;
+  transition: all 0.35s ease;
+}
+
+/* Neon underline (hidden) */
+.insane-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #f3f3f3,
+   #b1adad,
+    #d5d4d4
+  );
+  transform: translateX(-50%);
+  border-radius: 20px;
+  box-shadow:
+    0 0 10px rgb(255, 255, 255),
+    0 0 25px rgba(255, 255, 255, 0.8);
+  transition: width 0.35s ease;
+}
+
+/* Hover = GLOW + LIFT */
+.insane-link:hover {
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 1),
+    0 0 18px rgba(255, 255, 255, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.7);
+}
+
+/* Underline expand */
+.insane-link:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   ACTIVE LINK
+================================ */
+.insane-link.active {
+  color: #ffffff !important;
+}
+
+.insane-link.active::after {
+  width: 100%;
+}
+
+/* ===============================
+   MOBILE TWEAK
+================================ */
+@media (max-width: 991px) {
+  .insane-link {
+    padding: 10px 0;
+  }
+}
