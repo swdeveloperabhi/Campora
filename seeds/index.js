@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, "../.env") });
 
 import mongoose from "mongoose";
-import Campground from "../Models/Campground.js";
+import Campground from "../Models/campground.js";
 import { descriptors } from "./seedHelper.js";
 import { places } from "./seedHelper.js";
 import { campingCitiesIndia } from "./cities.js";

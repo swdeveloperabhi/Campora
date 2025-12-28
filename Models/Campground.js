@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Review from "./Review.js";
+import Review from "./review.js";
 
 
 const { Schema, model } = mongoose;

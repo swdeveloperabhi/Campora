@@ -1,7 +1,7 @@
 import { campgroundSchema , reviewSchema } from "./validationSchema.js";
 import ExpressError from "./utils/ExpressError.js";
-import Campground from "./Models/Campground.js";
-import Review from "./Models/Review.js";
+import Campground from "./Models/campground.js";
+import Review from "./Models/review.js";
 
 export const isLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {

@@ -1,4 +1,4 @@
-import Campground from "../Models/Campground.js";
+import Campground from "../Models/campground.js";
 import cloudinary from "../cloudinary/index.js";
 import * as maptilerClient from "@maptiler/client";
 
