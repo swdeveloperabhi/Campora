@@ -140,7 +140,6 @@ MongoDB Atlas – Cloud database
 
 Render – Deployment
 
-🗂️ Project Structure
 Campora/
 │
 ├── controllers/        # Business logic
@@ -153,6 +152,7 @@ Campora/
 ├── app.js              # Application entry point
 └── .env                # Environment variables
 
+
 ⚙️ Environment Variables
 
 Create a .env file in the root directory:
@@ -164,6 +164,7 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_KEY=your_cloud_key
 CLOUDINARY_SECRET=your_cloud_secret
 MAPTILER_API_KEY=your_maptiler_key
+
 
 
 ⚠️ Never commit .env to GitHub
