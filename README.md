@@ -140,30 +140,14 @@ MongoDB Atlas – Cloud database
 
 Render – Deployment
 
-Campora/
-│
-├── controllers/        # Business logic
-├── models/             # Mongoose schemas
-├── routes/             # Express routes
-├── views/              # EJS templates
-├── public/             # CSS, JS, static assets
-├── middleware.js       # Auth & validation middleware
-├── utils/              # Custom error handling
-├── app.js              # Application entry point
-└── .env                # Environment variables
+<img width="452" height="285" alt="image" src="https://github.com/user-attachments/assets/1ec49d9e-7417-4d8c-a3db-4f6aaf957cda" />
 
 
 ⚙️ Environment Variables
 
 Create a .env file in the root directory:
 
-PORT=3000
-MONGO_URL=your_mongodb_url
-SESSION_SECRET=your_session_secret
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_KEY=your_cloud_key
-CLOUDINARY_SECRET=your_cloud_secret
-MAPTILER_API_KEY=your_maptiler_key
+<img width="368" height="193" alt="image" src="https://github.com/user-attachments/assets/6443c5f2-65b8-4bb4-8d70-7e2c1034898f" />
 
 
 
