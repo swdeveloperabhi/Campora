@@ -128,7 +128,7 @@ SECRET=session_secret
 MAPTILER_API_KEY=your_key
 
 # Clone the repository
-git clone https://github.com/your-username/campora.git
+git clone https://github.com/swdeveloperabhi/campora.git
 
 # Navigate into the project
 cd campora
